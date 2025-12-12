@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  /* Dark background */
+  margin: 0;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.container {
+  background-color: #2c2c2c;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #a7ff83;
+  /* Lime green */
+}
+
+.logo i {
+  margin-right: 10px;
+  font-size: 28px;
+}
+
+.settings i {
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.gender-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.gender-card {
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gender-card.selected {
+  background-color: #a7ff83;
+  /* Lime green */
+  color: #1e1e1e;
+}
+
+.gender-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.gender-card p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.input-section {
+  background-color: #3c3c3c;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 10px;
+  color: #cccccc;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.input-value {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.input-value span {
+  font-size: 24px;
+  font-weight: 400;
+  margin-left: 5px;
+  color: #cccccc;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-button {
+  background-color: #a7ff83;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#height-value,
+#weight-value,
+#age-value {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: center;
+  padding: 10px;
+  outline: none;
+  width: 100px;
+  /* Adjust as needed */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #a7ff83;
+  /* Lime green */
+  color: #1e1e1e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #91ee70;
+}
+
+.bmi-value {
+  font-size: 60px;
+  font-weight: 700;
+  color: #a7ff83;
+  /* Lime green */
+  margin-bottom: 10px;
+}
+
+.bmi-category {
+  font-size: 20px;
+  font-weight: 500;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.advice {
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+.result-section {
+  background-color: #3c3c3c;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  /* Initially hidden */
+}
+
+.result-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+}

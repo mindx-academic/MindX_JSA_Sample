@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1,h3 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+            height: 80vh;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .flip-card-front {
+            background-color: #2980b9;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 300px;
+            height: 300px;
+        }
+
+
+        .flip-card-back {
+            background-color: #bbb;
+            color: black;
+            transform: rotateY(180deg);
+
+        }
+
+        .flip-card-back img {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animal Planet Flashcard</h1>
+    <h3>Click the image below to check the prediction results:</h3>
+
+    <div class="container">
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>I have a long neck and love to eat leaves from tall trees.</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://i.pinimg.com/736x/31/e8/90/31e89007584d5b49519f9eac76df5625.jpg" alt="Giraffe">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>I have a mane and am known as the "king of the jungle."</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://i.pinimg.com/736x/d0/6c/ae/d06cae051a76cbbacd087b8c351306ae.jpg" alt="Lion">
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>I am a large animal with a trunk and big ears.</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://i.pinimg.com/736x/12/7b/05/127b05c35bb2dc2b27f1caa5930eb9b2.jpg" alt="Elephant">
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>I live in cold places and waddle when I walk.</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://i.pinimg.com/736x/de/09/e7/de09e7c67ff308099f0558f95520dd8c.jpg" alt="Penguin">
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>I am black and white and love to eat bamboo.</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://i.pinimg.com/736x/49/52/4b/49524bed7d05093d7656b23ad9627324.jpg" alt="Panda">
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>I live in Australia and carry my babies in a pouch.</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://i.pinimg.com/736x/b5/07/d3/b507d39c74cc445723c21011a7f71499.jpg" alt="Kangaroo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function flipCard(cardElement) {
+            cardElement.classList.toggle('flipped');
+        }
+    </script>
+</body>
+
+</html>

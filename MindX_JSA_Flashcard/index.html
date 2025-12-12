@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .flashcard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .flashcard {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            height: 300px;
+            /* Fixed height for uniformity */
+        }
+
+        .flashcard:hover {
+            transform: scale(1.05);
+        }
+
+        .flashcard.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .flashcard-front,
+        .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .flashcard-front {
+            background-color: #ffecb3;
+            /* Light yellow */
+            color: #5d4037;
+            /* Dark brown */
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .flashcard-back {
+            background-color: #e0f2f7;
+            /* Light blue */
+            color: #00796b;
+            /* Teal */
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-back img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guess the Animal!</h1>
+    <div class="flashcard-grid">
+        <div class="flashcard" onclick="this.classList.toggle('is-flipped');">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">I have a long neck and love to eat leaves from tall trees.</div>
+                <div class="flashcard-back"><img
+                        src="https://i.pinimg.com/736x/31/e8/90/31e89007584d5b49519f9eac76df5625.jpg" alt="Giraffe">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="this.classList.toggle('is-flipped');">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">I have a mane and am known as the "king of the jungle."</div>
+                <div class="flashcard-back"><img
+                        src="https://i.pinimg.com/736x/d0/6c/ae/d06cae051a76cbbacd087b8c351306ae.jpg" alt="Lion"></div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="this.classList.toggle('is-flipped');">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">I am a large animal with a trunk and big ears.</div>
+                <div class="flashcard-back"><img
+                        src="https://i.pinimg.com/736x/12/7b/05/127b05c35bb2dc2b27f1caa5930eb9b2.jpg" alt="Elephant">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="this.classList.toggle('is-flipped');">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">I live in cold places and waddle when I walk.</div>
+                <div class="flashcard-back"><img
+                        src="https://i.pinimg.com/736x/de/09/e7/de09e7c67ff308099f0558f95520dd8c.jpg" alt="Penguin">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="this.classList.toggle('is-flipped');">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">I am black and white and love to eat bamboo.</div>
+                <div class="flashcard-back"><img
+                        src="https://i.pinimg.com/736x/49/52/4b/49524bed7d05093d7656b23ad9627324.jpg" alt="Panda"></div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="this.classList.toggle('is-flipped');">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">I live in Australia and carry my babies in a pouch.</div>
+                <div class="flashcard-back"><img
+                        src="https://i.pinimg.com/736x/b5/07/d3/b507d39c74cc445723c21011a7f71499.jpg" alt="Kangaroo">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

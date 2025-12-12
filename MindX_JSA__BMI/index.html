@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <link href='./BMI.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-chart-bar"></i>
+                <span>BMI Calculator</span>
+            </div>
+            <div class="settings">
+                <i class="fas fa-cog"></i>
+            </div>
+        </header>
+
+        <div class="gender-selection">
+            <div class="gender-card" data-gender="male">
+                <i class="fas fa-male"></i>
+                <p>MALE</p>
+            </div>
+            <div class="gender-card" data-gender="female">
+                <i class="fas fa-female"></i>
+                <p>FEMALE</p>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label for="height-value">Height</label>
+            <div class="input-value">
+                <input type="number" id="height-value" value="0">
+                <span>cm</span>
+            </div>
+            <div class="controls">
+                <div class="control-button">-</div>
+                <div class="control-button">+</div>
+            </div>
+        </div>
+
+        <!-- Phần cân nặng và độ tuổi -->
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <div class="input-section" style="flex-grow: 1;">
+                <label for="weight-value">Weight</label>
+                <div class="input-value">
+                    <input type="number" id="weight-value" value="0">
+                    <span>kg</span>
+                </div>
+                <div class="controls">
+                    <div class="control-button">-</div>
+                    <div class="control-button">+</div>
+                </div>
+            </div>
+
+            <div class="input-section" style="flex-grow: 1;">
+                <label for="age-value">Age</label>
+                <div class="input-value">
+                    <input type="number" id="age-value" value="0">
+                    <span>Year</span>
+                </div>
+                <div class="controls">
+                    <div class="control-button">-</div>
+                    <div class="control-button">+</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="result-section" id="result-section">
+            <h3>Result</h3>
+            <p>Your BMI is</p>
+            <div class="bmi-value" id="bmi-value"></div>
+            <div class="bmi-category" id="bmi-category"></div>
+            <p class="advice" id="advice"></p>
+        </div>
+
+        <button id="calculate">Calculate</button>
+    </div>
+
+
+
+
+    <script src="./BMI.js"></script>
+
+</body>
+
+</html>
