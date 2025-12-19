@@ -24,7 +24,7 @@ form.addEventListener("submit", (e) => {
     if (existingUser) {
       localStorage.setItem("currentUser", JSON.stringify(existingUser));
 
-      location.href = "/index.html";
+      location.href = "./index.html";
     } else {
       alert("Email or password is incorrect");
     }
